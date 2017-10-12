@@ -4,7 +4,7 @@ var launched_count = 0;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 		
-	
+	//qwerty
 function updateDisplay() {
 	$("#launched").text("Application launched: " + launched_count);
 	$("#resumed").text("Application paused: " + paused_count);
