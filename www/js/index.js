@@ -8,8 +8,8 @@ var phone=window.localStorage.getItem("phone");
 
 var myObj = { 
     "chocolate's name":"M&M's Choco Pouch", 
-    "weight":"130g" 
-    "Energy":"2017kj/100g"
+    "weight":"130g" ,
+    "Energy":"2017kj/100g",
     "Salt":"0.13g"
     
 };     
@@ -18,7 +18,7 @@ window.localStorage.setItem("chocolate",myJSON);
 var getchocolate = window.localStorage.getItem("chocolate");
 var chocoJSON = JSON.parse(getchocolate);
 
-
+alert(chocoJSON.weight);
 
 //function onDeviceReady() {
 	
@@ -26,6 +26,7 @@ var chocoJSON = JSON.parse(getchocolate);
         $("#pen").text("pen's colour is " + pen); 
         $("#com").text("computer's colour is " + com); 
         $("#phone").text("computer's colour is " + phone); 
+        $("#weight").test(chocoJSON.weight);
         
     });
                          
