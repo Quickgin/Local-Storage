@@ -1,17 +1,34 @@
-var key = "pen";
-var value = "blue";
-window.localStorage.setItem( key, value );
-var value = window.localStorage.getItem(key);
-alert(value);
+window.localStorage.setItem( "pen", "blue");
+window.localStorage.setItem( "computer", "black");
+window.localStorage.setItem( "phone", "white");
+var pen=window.localStorage.getItem("pen");
+var com=window.localStorage.getItem("computer");
+var phone=window.localStorage.getItem("phone");
+//document.addEventListener("deviceready", onDeviceReady, false);
+
+var myObj = { 
+    "chocolate's name":"M&M's Choco Pouch", 
+    "weight":"130g" 
+    "Energy":"2017kj/100g"
+    "Salt":"0.13g"
+    
+};     
+var myJSON = JSON.stringify(myObj);
+window.localStorage.setItem("chocolate",myJSON);
+var getchocolate = window.localStorage.getItem("chocolate");
+var chocoJSON = JSON.parse(getchocolate);
 
 
 
-document.addEventListener("deviceready", onDeviceReady, false);
-		
-// device APIs are available
-//
-    function onDeviceReady() {
-	    
-	alert("device ready");
-    }
+//function onDeviceReady() {
+	
+	$(document).ready(function(){
+        $("#pen").text("pen's colour is " + pen); 
+        $("#com").text("computer's colour is " + com); 
+        $("#phone").text("computer's colour is " + phone); 
+        
+    });
+                         
+	//alert("device ready");
+    //}
 
